@@ -1,8 +1,7 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 
 const Skills = () => {
-
   // Array of skills
   const skills = [
     {
@@ -48,7 +47,7 @@ const Skills = () => {
   ];
 
   return (
-<Container>
+    <Container>
       <h1>Skills</h1>
       <CardContainer>
         {skills.map((skill, index) => (
@@ -59,13 +58,13 @@ const Skills = () => {
         ))}
       </CardContainer>
     </Container>
-  )
-  
-}
+  );
+};
 
 // Styled components
 const Container = styled.div`
   padding: 2rem;
+  background-color: #95b7b4; /* Background color */
 `;
 
 const CardContainer = styled.div`
@@ -80,6 +79,12 @@ const Card = styled.div`
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 const CardHeader = styled.h2`
@@ -94,4 +99,4 @@ const CardContent = styled.p`
   line-height: 1.5;
 `;
 
-export default Skills
+export default Skills;

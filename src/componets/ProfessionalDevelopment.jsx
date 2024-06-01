@@ -1,5 +1,4 @@
 import React from 'react'
-
 import styled from 'styled-components';
 
 const ProfessionalDevelopment = () => {
@@ -24,7 +23,7 @@ const Box = styled.div`
   border-radius: 8px;
   padding: 1.5rem;
   margin-top: 1rem;
+  background-color: #f9f9f9; /* Set background color */
 `;
-
 
 export default ProfessionalDevelopment

@@ -1,5 +1,4 @@
-import React from 'react'
-
+import React from 'react';
 import styled from 'styled-components';
 
 const Expriance = () => {
@@ -8,13 +7,13 @@ const Expriance = () => {
       <h1>Experience</h1>
       <Card>
         <CardContent>
-          <h2>Associate Software Engineer</h2>
-          <p>Dec 2021 - Feb 2023</p>
-          <p>Vaivue ResourceQ Services Pvt, Hyderabad</p>
-          <ul>
-            <li>Collaborated with cross-functional teams to develop and deploy software solutions, gaining practical experience in full-stack development.</li>
-            <li>Demonstrated proficiency in Python and SQL to build robust data pipelines and algorithms.</li>
-          </ul>
+          <Title>Associate Software Engineer</Title>
+          <Date>Dec 2021 - Feb 2023</Date>
+          <Company>Vaivue ResourceQ Services Pvt, Hyderabad</Company>
+          <Description>
+            Collaborated with cross-functional teams to develop and deploy software solutions, gaining practical experience in full-stack development.
+            Demonstrated proficiency in Python and SQL to build robust data pipelines and algorithms.
+          </Description>
         </CardContent>
       </Card>
     </Container>
@@ -40,15 +39,26 @@ const Card = styled.div`
 `;
 
 const CardContent = styled.div`
-  h2 {
-    margin-bottom: 0.5rem;
-  }
-  
-  ul {
-    margin-top: 1rem;
-    padding-left: 1rem;
-  }
 `;
 
+const Title = styled.h2`
+  margin-bottom: 0.5rem;
+  color: #4CAF50; /* Green color for title */
+`;
 
-export default Expriance
+const Date = styled.p`
+  color: #007bff; /* Blue color for date */
+`;
+
+const Company = styled.p`
+  color: #FF6347; /* Red color for company */
+`;
+
+const Description = styled.p`
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-top: 1rem;
+`;
+
+export default Expriance;

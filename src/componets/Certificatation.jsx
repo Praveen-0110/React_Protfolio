@@ -1,5 +1,4 @@
-import React from 'react'
-
+import React from 'react';
 import styled from 'styled-components';
 
 const Certificatation = () => {
@@ -60,14 +59,14 @@ const Card = styled.div`
 
 const CardHeader = styled.h2`
   margin: 0 0 1rem;
-  font-size: 1.25rem;
-  color: #333;
+  font-size: 1.5rem; /* Medium font size */
+  color: #4CAF50; /* Green color */
 `;
 
 const CardContent = styled.p`
-  font-size: 1rem;
+  font-size: 1rem; /* Medium font size */
   color: #555;
   line-height: 1.5;
 `;
 
-export default Certificatation
+export default Certificatation;

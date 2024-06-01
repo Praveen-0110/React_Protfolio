@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 
 const About = () => {
@@ -11,38 +11,62 @@ const About = () => {
         </CardContent>
       </Card>
     </Container>
-    
-  )
+  );
 }
 
-  // Styled components
+// Styled components
 const Container = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-background-color: #f0f0f0; /* Light grey background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(170deg, #4d7776, #7e9cba); /* Vibrant gradient background */
+  /* padding-top: 30px; Adjust for fixed navbar */
 `;
 
 const Card = styled.div`
-background: #ffffff;
-border: 1px solid #ddd;
-border-radius: 8px;
-padding: 2rem;
-max-width: 600px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  border: 1px solid #64b5f6; /* Border color matches background gradient */
+  border-radius: 20px; /* Rounded corners */
+  padding: 3rem;
+  max-width: 800px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Slight shadow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(0.98); /* Slight zoom out effect */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    background: linear-gradient(135deg, #ffffff, #f9f9f9); /* Lighter gradient on hover */
+  }
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
 `;
 
 const CardHeader = styled.h1`
-margin: 0 0 1rem;
-font-size: 1.5rem;
-color: #333;
+  margin: 0 0 1rem;
+  font-size: 2rem; /* Increased font size */
+  color: #ffffff; /* Text color */
+  background: linear-gradient(to right, #64b5f6, #1976d2); /* Gradient background */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: color 0.3s ease-in-out;
+
+  ${Card}:hover & {
+    color: #1976d2; /* Change text color on hover */
+  }
 `;
 
 const CardContent = styled.p`
-font-size: 1rem;
-color: #555;
-line-height: 1.5;
+  font-size: 1.25rem; /* Increased font size */
+  color: #333; /* Text color */
+  line-height: 1.6;
+  transition: color 0.3s ease-in-out;
+
+  ${Card}:hover & {
+    color: #444; /* Change text color on hover */
+  }
 `;
 
-export default About
+export default About;

@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './componets/Navbar'
 
-import { Route,  Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import About from './componets/About'
 import Skills from './componets/Skills'
 import Projects from './componets/Projects'
@@ -12,6 +12,7 @@ import Educations from './componets/Educations'
 import Expriance from './componets/Expriance'
 import Certificatation from './componets/Certificatation'
 import ProfessionalDevelopment from './componets/ProfessionalDevelopment'
+import Footer from './componets/Footer'
 
 
 function App() {
@@ -29,7 +30,6 @@ function App() {
   return (
     <>
       <Navbar items={navItems} />
-
       <Routes>
         <Route path="/summary" element={<About />} />
         <Route path="/skills" element={<Skills />} />
@@ -41,6 +41,8 @@ function App() {
 
         {/* Add more routes as needed */}
       </Routes>
+
+      {/* <Footer /> */}
     </>
 
   );

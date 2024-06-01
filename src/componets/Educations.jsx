@@ -1,18 +1,16 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
 
-
-import styled
- from 'styled-components';
 const Educations = () => {
   return (
     <Container>
       <h1>Education</h1>
       <Card>
         <CardContent>
-          <h2>Master of Science: Computer Information Systems</h2>
-          <p>Expected in May 2024</p>
+          <Title>Master of Science: Computer Information Systems</Title>
+          <p className="expected">Expected in May 2024</p>
           <p>New England College</p>
-          <p>Henniker, NH</p>
+          <p className="location">Henniker, NH</p>
         </CardContent>
       </Card>
     </Container>
@@ -33,9 +31,21 @@ const Card = styled.div`
 `;
 
 const CardContent = styled.div`
-  h2 {
-    margin-bottom: 0.5rem;
+  /* Custom styles for the content */
+  .expected {
+    color: #ff6347; /* Red color for expected date */
+    font-weight: bold;
+  }
+
+  .location {
+    color: #008000; /* Green color for location */
   }
 `;
 
-export default Educations
+const Title = styled.h2`
+  margin-bottom: 0.5rem;
+  color: #0000ff; /* Blue color for title */
+  font-size: 1.5rem; /* Larger font size for title */
+`;
+
+export default Educations;
