@@ -1,0 +1,41 @@
+import React from 'react'
+
+
+import styled
+ from 'styled-components';
+const Educations = () => {
+  return (
+    <Container>
+      <h1>Education</h1>
+      <Card>
+        <CardContent>
+          <h2>Master of Science: Computer Information Systems</h2>
+          <p>Expected in May 2024</p>
+          <p>New England College</p>
+          <p>Henniker, NH</p>
+        </CardContent>
+      </Card>
+    </Container>
+  );
+}
+
+// Styled components
+const Container = styled.div`
+  padding: 2rem;
+`;
+
+const Card = styled.div`
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+`;
+
+const CardContent = styled.div`
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+`;
+
+export default Educations
